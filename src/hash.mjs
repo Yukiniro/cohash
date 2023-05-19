@@ -1,11 +1,23 @@
-import { readFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { createHash } from "crypto";
 
-async function hash(path) {
-  const fileBuffer = await readFile(path);
+async function hashBuffer(buffer) {
   const hash = createHash("sha256");
-  hash.update(fileBuffer);
+  hash.update(buffer);
   return hash.digest("hex");
 }
 
-export { hash };
+async function cohash(input, flags) {
+  const path = input[0];
+  const { hashLength, output } = flags;
+  const fileBuffer = await readFile(path);
+  const hashValue = (await hashBuffer(fileBuffer)).slice(0, hashLength);
+  if (output) {
+    const outputPath = output.replace(/\[hash\]/g, hashValue);
+    await writeFile(outputPath, fileBuffer);
+  } else {
+    console.log(hashValue);
+  }
+}
+
+export { cohash };

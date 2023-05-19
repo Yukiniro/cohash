@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 import meow from "meow";
-import { hash } from "./hash.mjs";
+import { cohash } from "./hash.mjs";
 
 const cli = meow(
   `
@@ -8,9 +8,18 @@ const cli = meow(
 	  $ cohash <input>
 
 	Examples
-	  $ hash ./test.js
-	  🌈 unicorns 🌈
-`
+	  $ cohash ./test.js
+	  $ cohash ./test.js -l 6
+`,
+  {
+    importMeta: import.meta,
+    flags: {
+      version: { shortFlag: "v" },
+      help: { shortFlag: "h" },
+      hashLength: { type: "string", shortFlag: "l" },
+      output: { shortFlag: "o" },
+    },
+  }
 );
 
-hash(cli.input.at(0));
+cohash(cli.input, cli.flags);
