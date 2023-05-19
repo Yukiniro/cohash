@@ -1,6 +1,6 @@
 {
   "name": "cohash",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple tool to generate file hashes on the command line.",
   "main": "dist/cohash.cjs",
   "module": "dist/cohash.mjs",
@@ -45,7 +45,6 @@
     "fast-hash-file": "^1.0.3",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
-    "meow": "^12.0.1",
     "prettier": "^2.6.0",
     "prettier-eslint": "^13.0.0",
     "rollup": "^3.2.2",
@@ -55,5 +54,8 @@
     "tslib": "^2.3.1",
     "typescript": "^4.6.4",
     "vitest": "^0.24.3"
+  },
+  "dependencies": {
+    "meow": "^12.0.1"
   }
 }
