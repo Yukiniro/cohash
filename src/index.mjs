@@ -1,11 +1,11 @@
-#!/usr/bin/env node
+#! /usr/bin/env node
 import meow from "meow";
 import { hash } from "./hash.mjs";
 
 const cli = meow(
   `
 	Usage
-	  $ hash <input>
+	  $ cohash <input>
 
 	Examples
 	  $ hash ./test.js

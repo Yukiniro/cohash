@@ -1,13 +1,14 @@
 {
   "name": "command-hash",
-  "version": "1.0.3",
+  "version": "0.0.1",
   "description": "",
-  "main": "dist/ssprojet.cjs",
-  "module": "dist/ssprojet.mjs",
+  "main": "dist/hash.cjs",
+  "module": "dist/hash.mjs",
   "types": "dist/src/index.d.ts",
-  "bin": "dist/cli/command-hash",
+  "bin": {
+    "cohash": "src/index.mjs"
+  },
   "scripts": {
-    "run": "node src/index.mjs",
     "build": "rollup -c rollup.config.mjs",
     "lint": "npx eslint src/**",
     "prettier": "npx prettier src/** --write && npx prettier __test__/** --write",

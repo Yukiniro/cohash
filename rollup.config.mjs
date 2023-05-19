@@ -10,29 +10,14 @@ const jsonString = await readFile("./package.json", "utf8");
 const libraryName = JSON.parse(jsonString).name;
 
 export default {
-  input: {
-    hash: "src/hash.mjs",
-    cli: "src/index.mjs",
-  },
+  input: "src/hash.mjs",
   output: [
     {
-      entryFileNames: "entry-hash",
-      dir: `./dist/hash.cjs`,
+      file: `./dist/hash.cjs`,
       format: "cjs",
     },
     {
-      entryFileNames: "entry-hash",
-      dir: `./dist/hash.mjs`,
-      format: "esm",
-    },
-    {
-      entryFileNames: "entry-hash",
-      dir: `./dist/cli/${libraryName}.cjs`,
-      format: "cjs",
-    },
-    {
-      entryFileNames: "entry-hash",
-      dir: `./dist/cli/${libraryName}.mjs`,
+      file: `./dist/hash.mjs`,
       format: "esm",
     },
   ],
