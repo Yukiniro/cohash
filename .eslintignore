@@ -3,3 +3,5 @@ __test__
 node_modules
 website
 rollup.*
+public/audioChunkMerge.min.js
+*

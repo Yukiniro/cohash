@@ -1,5 +1,6 @@
 {
-  "extends": [
-    "@yukiniro/eslint-config"
-  ]
+  "extends": ["@yukiniro/eslint-config"],
+  "rules": {
+    "require-await": 0
+  }
 }
