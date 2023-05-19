@@ -16,7 +16,7 @@ const cli = meow(
     flags: {
       version: { shortFlag: "v" },
       help: { shortFlag: "h" },
-      hashLength: { type: "string", shortFlag: "l" },
+      length: { type: "string", shortFlag: "l" },
       output: { shortFlag: "o" },
     },
   }

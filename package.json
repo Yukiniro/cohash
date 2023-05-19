@@ -1,6 +1,6 @@
 {
   "name": "command-hash",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "",
   "main": "dist/hash.cjs",
   "module": "dist/hash.mjs",
@@ -15,7 +15,7 @@
     "test": "npx vitest",
     "test:run": "npx vitest run",
     "test:coverrage": "npx vitest --coverage",
-    "publish": "npm run test:run && npm run build && npm publish",
+    "npm:publish": "npm publish",
     "prepare": "npx husky install"
   },
   "keywords": [

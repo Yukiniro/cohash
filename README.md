@@ -1,21 +1,24 @@
-# starter-node
+# cohash
 
-![NPM](https://img.shields.io/npm/l/ssprojet?color=blue&style=flat-square) ![npm](https://img.shields.io/npm/v/ssprojet?color=blue&style=flat-square)
+![NPM](https://img.shields.io/npm/l/cohash?color=blue&style=flat-square) ![npm](https://img.shields.io/npm/v/cohash?color=blue&style=flat-square)
 
-The `starter-node` is a template to start a node project.
+`cohash` is a simple command line to generate a hash value for files.
 
-## Features
+## Install
 
-- `pnpm` - package manager
-- `vitest` - test library
-- `docusaurus` - document library
-- `prettier` - code style formate
-- `eslint` - code quality
-- `husky` - pre-commit
-- `lint-staged` - auto lint for staged files
+```shell
+pnpm add cohash -g
+npm i cohash -g
+```
 
-## How to use
+## Useage
 
-You could use `degit Yukiniro/starter-node your-project-name` to create a project.
+```shell
+cohash ./test.js -l 8 -o a.[hash].js
+```
 
-If you have no `degit`. Please install it by `npm install -g degit`.
+## Flags
+
+- `--output` or `-o`: Specify the address of the generated file. It will log the hash value to the terminal if there is no `--output` or `-o`.
+- `--length` or `-l`: Limit the length of the hash value.
+  
