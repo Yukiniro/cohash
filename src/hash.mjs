@@ -9,9 +9,9 @@ async function hashBuffer(buffer) {
 
 async function cohash(input, flags) {
   const path = input[0];
-  const { hashLength, output } = flags;
+  const { length, output } = flags;
   const fileBuffer = await readFile(path);
-  const hashValue = (await hashBuffer(fileBuffer)).slice(0, hashLength);
+  const hashValue = (await hashBuffer(fileBuffer)).slice(0, length);
   if (output) {
     const outputPath = output.replace(/\[hash\]/g, hashValue);
     await writeFile(outputPath, fileBuffer);
