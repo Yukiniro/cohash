@@ -1,9 +1,9 @@
 {
-  "name": "command-hash",
+  "name": "cohash",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/hash.cjs",
-  "module": "dist/hash.mjs",
+  "description": "A simple tool to generate file hashes on the command line.",
+  "main": "dist/cohash.cjs",
+  "module": "dist/cohash.mjs",
   "types": "dist/src/index.d.ts",
   "bin": {
     "cohash": "src/index.mjs"
@@ -19,10 +19,10 @@
     "prepare": "npx husky install"
   },
   "keywords": [
-    "vite",
-    "vitest",
-    "docusaurus",
-    "template"
+    "hash",
+    "crypto",
+    "file",
+    "command line"
   ],
   "author": "Yukiniro",
   "license": "MIT",
