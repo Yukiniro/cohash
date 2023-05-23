@@ -1,6 +1,6 @@
 {
   "name": "cohash",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A simple tool to generate file hashes on the command line.",
   "main": "dist/cohash.cjs",
   "module": "dist/cohash.mjs",
@@ -15,7 +15,7 @@
     "test": "npx vitest",
     "test:run": "npx vitest run",
     "test:coverrage": "npx vitest --coverage",
-    "npm:publish": "npm publish",
+    "npm:publish": "npm run test:run && npm publish",
     "prepare": "npx husky install"
   },
   "keywords": [
@@ -40,6 +40,7 @@
     "@rollup/plugin-json": "^6.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
     "@rollup/plugin-typescript": "^8.3.1",
+    "@vitest/coverage-c8": "^0.31.1",
     "@yukiniro/eslint-config": "^0.0.3",
     "eslint": "^8.11.0",
     "fast-hash-file": "^1.0.3",
